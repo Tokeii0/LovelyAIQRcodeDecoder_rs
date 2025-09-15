@@ -1,0 +1,51 @@
+# Rust
+target/
+Cargo.lock
+
+# Executables
+*.exe
+*.dll
+*.so
+*.dylib
+qr-decoder
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+env/
+qr_env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Build artifacts
+*.o
+*.a
+*.lib
+
+# Test outputs
+test_output/
+results/

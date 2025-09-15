@@ -1,0 +1,55 @@
+[package]
+name = "lovely-ai-qrcode-decoder"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "LovelyAIQRcodeDecoder - A QR code decoder based on OpenCV-Rust"
+license = "MIT"
+repository = "https://github.com/yourusername/LovelyAIQRcodeDecoder"
+keywords = ["qr-code", "opencv", "image-processing", "decoder"]
+categories = ["multimedia::images", "command-line-utilities"]
+
+[[bin]]
+name = "lovely-ai-qrcode-decoder"
+path = "src/main.rs"
+
+
+
+[dependencies]
+# OpenCV bindings for Rust
+opencv = "0.95.1"
+
+# Command line argument parsing
+clap = { version = "4.0", features = ["derive"] }
+
+# Serialization support
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging
+log = "0.4"
+env_logger = "0.10"
+
+# Additional utilities
+chrono = { version = "0.4", features = ["serde"] }
+colored = "2.0"
+rand = "0.8"
+
+
+
+[dev-dependencies]
+tempfile = "3.0"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+debug = true
